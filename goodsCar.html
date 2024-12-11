@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .container {
+            /* width: 375px; */
+            height: 100%;
+            /* background-color: red; */
+            margin: 0 auto;
+        }
+
+        .head {
+            height: 23px;
+            /* background-color: red; */
+
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 30px;
+        }
+
+        .head p {
+            color: rgba(255, 108, 114, 1);
+            height: 22px;
+            /* border: 1px red solid; */
+            /** 文本1 */
+
+            text-align: center;
+            font-size: 18px;
+            line-height: 21.1px;
+
+
+
+        }
+
+        .head .searches {
+            width: 22px;
+            height: 22px;
+        }
+
+        .head .search {
+            /* border: 1px solid blue; */
+            width: 22px;
+            height: 22px;
+
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 3px 6px rgba(115, 6, 6, 0.2), inset -1px -1px 0px rgba(255, 255, 255, 1), inset 1px 1px 0px rgba(255, 255, 255, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .goods {
+            height: 350px;
+            /* border: 1px solid red; */
+            margin-top: 20px;
+            /* background-color: aqua; */
+        }
+
+        .goods .select {
+            height: 110px;
+            background: url('./img/carrect.png');
+            border-radius: 16px 16px, 16px, 16px;
+            box-shadow: 0px 6px 12px rgba(166, 3, 0, 0.14);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+        }
+
+        .goods .photo {
+            width: 113px;
+            height: 63px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            /* border: 1px solid red; */
+        }
+
+        .goods .one {
+            /* width: 107px; */
+            /* height: 19px; */
+            /* border: 1px solid cyan; */
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .goods h2 {
+            /** 文本1 */
+            font-size: 16px;
+
+
+            line-height: 18.75px;
+            color: rgba(51, 51, 51, 1);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .goods .two {
+            /* width: 107px; */
+            height: 19px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .goods .three {
+            /* width: 107px; */
+            height: 25px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .goods .two p {
+            font-size: 10px;
+
+            letter-spacing: 0px;
+            line-height: 11.72px;
+            color: rgba(102, 102, 102, 1);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .goods .three span {
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            line-height: 23.44px;
+            color: rgba(255, 108, 114, 1);
+
+        }
+
+        .goods .three .btns {
+            width: 81px;
+            height: 28px;
+            background: linear-gradient(180deg, rgba(255, 108, 114, 1) 0%, rgba(255, 131, 67, 1) 100%);
+            box-shadow: 0px 2px 4px rgba(166, 3, 0, 0.2), inset -1px -1px 0px rgba(255, 255, 255, 1), inset 1px 1px 0px rgba(255, 255, 255, 1);
+            display: flex;
+            flex-direction: row;
+            border-radius: 14px;
+
+        }
+
+        .goods .three .btns .item {
+            width: 27px;
+            height: 28px;
+            text-align: center;
+            color: white;
+            /* color: rgba(255, 255, 255, 1); */
+        }
+
+        .goods .three .btns button {
+            /* background-color: red; */
+            background: linear-gradient(180deg, rgba(255, 108, 114, 1) 0%, rgba(255, 131, 67, 1) 100%);
+            color: white;
+            border-radius: 197px;
+            border: 0;
+        }
+
+        .goods .select .cirles {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            /* background-color: yellow; */
+            background: linear-gradient(180deg, rgba(255, 108, 114, 1) 0%, rgba(255, 131, 67, 1) 100%);
+            position: absolute;
+            right: 7px;
+            top: 43px;
+        }
+
+        .goods .select .cirles img {
+            margin-left: 5px;
+        }
+
+        .end {
+            width: 339px;
+            height: 210px;
+            /* background-color: red; */
+            margin-left: 17px;
+        }
+
+        .end .price {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .end .long {
+            width: 338px;
+            height: 48px;
+            border-radius: 283px;
+            background: linear-gradient(180deg, rgba(255, 108, 114, 1) 0%, rgba(255, 131, 67, 1) 100%);
+            box-shadow: 0px 3px 6px rgba(166, 3, 0, 0.3), inset -1px -1px 0px rgba(255, 255, 255, 1), inset 1px 1px 0px rgba(255, 255, 255, 1);
+            text-align: center;
+            margin-top: 70px;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 1);
+        }
+        .end p{
+            text-align: right;
+            font-size: 10px;
+            color: rgba(255, 108, 114, 1);
+        }
+        .end .old p{
+            font-size: 14px;
+            color: rgba(51, 51, 51, 1);
+        }
+        .end .new one{
+            font-size: 14px;
+            color: rgba(51, 51, 51, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="searches"></div>
+            <p>我的购物车</p>
+            <div class="search">
+                <img src="./img/write.png" alt="">
+            </div>
+        </div>
+        <div class="goods">
+            <div class="select">
+                <div class="photo">
+                    <img src="./img/hecat.png" alt="">
+                </div>
+
+                <div class="one">
+                    <h2>漫步者/HECAT</h2>
+                    <div class="two">
+                        <img src="./img/cirle.png" alt="">
+                        <p>奢华金/官方标配</p>
+                        <img src="./img/down.png" alt="">
+                    </div>
+                    <div class="three">
+                        <div class="money">
+                            <span>￥</span>
+                            <span>224</span>
+                            <span>RMB</span>
+                            <span></span>
+                        </div>
+                        <div class="btns">
+                            <button class="item">+</button>
+                            <span class="item">1</span>
+                            <button class="item">-</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cirles">
+                    <img src="./img/goodsyes.png" alt="">
+                </div>
+
+            </div>
+            <div class="select">
+                <div class="photo">
+                    <img src="./img/hecat.png" alt="">
+                </div>
+
+                <div class="one">
+                    <h2>漫步者/HECAT</h2>
+                    <div class="two">
+                        <img src="./img/cirle.png" alt="">
+                        <p>奢华金/官方标配</p>
+                        <img src="./img/down.png" alt="">
+                    </div>
+                    <div class="three">
+                        <div class="money">
+                            <span>￥</span>
+                            <span>224</span>
+                            <span>RMB</span>
+                            <span></span>
+                        </div>
+                        <div class="btns">
+                            <button class="item">+</button>
+                            <span class="item">1</span>
+                            <button class="item">-</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cirles">
+                    <img src="./img/goodsyes.png" alt="">
+                </div>
+
+            </div>
+            <div class="select">
+                <div class="photo">
+                    <img src="./img/hecat.png" alt="">
+                </div>
+
+                <div class="one">
+                    <h2>漫步者/HECAT</h2>
+                    <div class="two">
+                        <img src="./img/cirle.png" alt="">
+                        <p>奢华金/官方标配</p>
+                        <img src="./img/down.png" alt="">
+                    </div>
+                    <div class="three">
+                        <div class="money">
+                            <span>￥</span>
+                            <span>224</span>
+                            <span>RMB</span>
+                            <span></span>
+                        </div>
+                        <div class="btns">
+                            <button class="item">+</button>
+                            <span class="item">1</span>
+                            <button class="item">-</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cirles">
+                    <img src="./img/goodsyes.png" alt="">
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class="end">
+            <p>点击查看购买疑问？</p>
+            <div class="price">
+                <div class="old">
+                    <p>商品总价</p>
+                </div>
+                <div>
+                    <span>￥</span>
+                    <span>598</span>
+                    <span>RMB</span>
+                </div>
+
+            </div>
+            <div class="price">
+                <div class="new">
+                    <span class="one">优惠</span>
+                    <span>(漫步者/HECAT)</span>
+                </div>
+                <div>
+                    <span>￥</span>
+                    <span>-75</span>
+                    <span>RMB</span>
+                </div>
+
+            </div>
+            <div class="price">
+                <div class="total">
+                    <span>合计</span>
+                </div>
+                <div>
+                    <span>￥</span>
+                    <span>523</span>
+                    <span>RMB</span>
+                </div>
+
+            </div>
+
+            <div class="long">立即付款</div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

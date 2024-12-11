@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            /* width: 375px; */
+            height: 1000px;
+            /*background-color: red;*/
+            margin: 0 auto;
+        }
+
+        .head {
+            height: 40px;
+            /*background-color: red;*/
+
+            position: relative;
+        }
+
+        .head h2 {
+            height: 40px;
+            /*background-color: blue;*/
+            /* 文本居中*/
+            font-size: 18px;
+            text-align: center;
+            color: rgba(255, 108, 114, 1);
+            line-height: 40px;
+        }
+
+        .head .search {
+            width: 38px;
+            height: 38px;
+            /*border: 1px solid blue;*/
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            right: 17px;
+            top: 1px;
+
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 3px 6px rgba(115, 6, 6, 0.2), inset -1px -1px 0px rgba(255, 255, 255, 1), inset 1px 1px 0px rgba(255, 255, 255, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .label {
+            height: 38px;
+            /*background-color: yellow;*/
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            align-items: center;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 3px 6px rgba(97, 23, 8, 0.2), inset -1px -1px 0px rgba(255, 255, 255, 1), inset 1px 1px 0px rgba(255, 255, 255, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .label .item {
+            width: 80px;
+            /*border: 1px solid black;*/
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            cursor: pointer;
+            
+        }
+
+        .label .item span {
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(51, 51, 51, 1);
+            padding-bottom: 4px;
+        }
+
+        .label .item .active {
+            border-bottom: 2px solid rgba(255, 108, 114, 1);
+        }
+
+        .content {
+            /*height: 800px;*/
+            /*background-color: purple;*/
+
+            display: flex;
+            flex-direction: row;
+        }
+
+        .content .menu {
+            width: 150px;
+            height: 600px;
+
+        }
+
+        .content .menu .item {
+            height: 46px;
+            width: 150px;
+            /*background-color: pink;*/
+            /*border: 1px solid black;*/
+            text-align: center;
+            line-height: 46px;
+            background-color: rgba(255, 224, 225, 1);
+
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(102, 102, 102, 1);
+        }
+
+        .content .menu .radius-rt {
+            border-radius: 0 20px 0 0;
+            /*border: 1px solid white;*/
+        }
+
+        .content .menu .radius-rb {
+            border-radius: 0 0 20px 0;
+            /*border: 1px solid white;*/
+        }
+
+
+        .content .menu .active {
+            background-color: white;
+            border-left: 3px solid rgba(255, 108, 114, 1);
+            color: rgba(255, 108, 114, 1);
+        }
+
+        .content .goods {
+            width: 225px;
+            height: 554px;
+            /* background-color: yellow; */
+        }
+
+        .content .goods .four {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(102, 102, 102, 1);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            align-items: center;
+            padding-top: 20px;
+
+
+
+        }
+
+        .content .goods .end {
+
+            /* background-color: red; */
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        .content .goods .goodss {
+            width: 110px;
+            height: 105px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content .goods .goodss img {
+            width: 90px;
+            height: 90px;
+
+        }
+
+        .content .goods .goodss p {
+            text-align: center;
+        }
+
+        .footer {
+            width: 375px;
+            height: 104px;
+            /* background-color: red; */
+            /* 固定定位 */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-image: url('./img/navBg.png');
+            background-position: -20px 40px;
+            background-repeat: no-repeat;
+            background-size: 412px 77px;
+
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: end;
+
+        }
+
+        .nav .item {
+            width: 52px;
+            height: 52px;
+            /* border: 1px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+
+        }
+
+        .nav .item img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .color-white {
+            color: rgba(255, 255, 255, 1)
+        }
+
+        .color-gray {
+            color: rgba(255, 255, 255, 0.6)
+        }
+
+        .footer .goodcar {
+            position: relative;
+            /* background-color; */
+            top: -40px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+
+            background-image: url('./img/image.png');
+            background-size: 60px 60px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>筛选列表</h2>
+            <div class="search">
+                <img src="./img/search.png" alt="">
+            </div>
+        </div>
+        <div class="label">
+            <div class="item">
+                <span class="active">分类</span>
+            </div>
+            <div class="item">
+                <span>品牌</span>
+            </div>
+            <div class="item">
+                <span>最热</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div class="item radius-rb"></div>
+                <div class="item active">精选</div>
+                <div class="item radius-rt">耳机</div>
+                <div class="item">平板</div>
+                <div class="item">笔记本</div>
+                <div class="item">显卡</div>
+                <div class="item">手机</div>
+                <div class="item">下北泽特产</div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+
+            <div class="goods">
+
+                <div class="four">
+                    <img src="./img/four.png" alt="">
+                    <span>精选推荐</span>
+                </div>
+
+                <div class="end">
+                    <div class="goodss"><img src="./img/good1.png" alt="">
+                        <p>耳机</p>
+                    </div>
+                    <div class="goodss"><img src="./img/good2.png" alt="">
+                        <p>笔记本</p>
+                    </div>
+                    <div class="goodss"><img src="./img/good3.png" alt="">
+                        <p>智能手环</p>
+                    </div>
+                    <div class="goodss"><img src="./img/good4.png" alt="">
+                        <p>相机</p>
+                    </div>
+                    <div class="goodss"><img src="./img/good5.png" alt="">
+                        <p>智能手机</p>
+                    </div>
+                    <div class="goodss"><img src="./img/good6.png" alt="">
+                        <p>无人机</p>
+                    </div>
+                    <div class="goodss"><img src="./img/good7.png" alt="">
+                        <p>鼠标</p>
+                    </div>
+                    <div class="goodss"><img src="./img/good8.png" alt="">
+                        <p>U盘</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer nav">
+            <div class="item color-gray">
+                <img src="./img/navType1.png" alt="">
+                <span>分类</span>
+            </div>
+
+            <div class="item color-gray">
+                <img src="./img/navType.png" alt="">
+                <span>分类</span>
+            </div>
+
+            <div class="item goodcar">
+                <img src="./img/goodcar.png" alt="">
+                <!-- <span>首页</span> -->
+            </div>
+
+            <div class="item color-gray">
+                <img src="./img/navType3.png" alt="">
+                <span>论坛</span>
+            </div>
+
+            <div class="item color-white">
+                <img src="./img/navType4.png" alt="">
+                <span>我的</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

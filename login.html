@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            background: rgba(245, 245, 245, 1);
+        }
+        body {
+            /*  */
+            display: flex;
+            /* 设置主轴方向 */
+            flex-direction: column;
+            /* 交叉轴的对齐方式 */
+            align-items: center;
+            color: rgb(245, 245, 245, 1)
+        }
+        .logo {
+            margin-top: 105px;
+        }
+        .logo-img {
+            width: 67px;
+            height: 67px;
+        }
+        .logo-text {
+            margin-top: 13px;
+            font-size: 20px;
+            font-weight: 700px;
+            letter-spacing: 0;
+            line-height: 24px;
+            color: rgba(255, 108, 114, 1);
+            font-family: "微软雅黑", monospace;
+        }
+        .logo-form {
+            width: 340px;
+            height: 206px;
+            border: 2px solid white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 24px;
+            box-shadow: 0px 4px 8px rgba(166, 3, 0, 0.2), inset -2px -2px 0px rgba(255, 255, 255, 1), inset 2px 2px 0px rgba(255, 255, 255, 1);
+        }
+        .form-container {
+            width: 300px;
+            height: 30px;
+            /* border: 1px solid greenyellow; */
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            border-bottom: 2px solid rgba(255, 108, 114, 1);
+        }
+        .form-container input {
+            width: 250px;
+            margin-left: 5px;
+            height: 30px;
+            /* 内边框 */
+            border: 0;
+            /* 外边框 */
+            outline: 0;
+            background: rgba(245, 245, 245, 1);
+        }
+        .form-container label {
+            margin-bottom: 4px;
+            font-weight: 500;
+            color: rgba(102, 102, 102, 1);
+        }
+        .input-username {
+            margin-top: 40px;
+        }
+        .input-password {
+            margin-top: 28px;
+        }
+        .input-text {
+            margin-top: 48px;
+            width: 300px;
+            /* border: 1 solid red; */
+            text-align: right;
+            font-size: 14px;
+        }
+        .input-text p {
+            color: rgba(102, 102, 102, 1);
+        }
+        .input-text a {
+            color: rgba(102, 102, 102, 1);
+        }
+        .quick-login {
+            text-align: right;
+            width: 340px;
+            margin-top: 17px;
+            font-size: 14;
+            color: rgba(102, 102, 102, 1);
+        }
+        .quick-login span {
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 5px;
+            text-decoration: underline;
+            color: rgba(255, 102, 102, 1);
+        }
+        .login {
+            margin-top: 130px;
+        }
+        .login button {
+            width: 338px;
+            height: 48px;
+            border: 0;
+            border-radius: 24px;
+            box-shadow: 0 3px 6px;
+            background: linear-gradient(180deg, rgba(255, 108, 114, 1) 0%, rgba(255, 131, 67, 1) 100%);
+            box-shadow: 0px 3px 6px rgba(166, 3, 0, 0.3), inset -1px -1px 0px rgba(255, 255, 255, 1), inset 1px 1px 0px rgba(255, 255, 255, 1);
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0px;
+            line-height: 21.1px;
+            color: rgba(255, 255, 255, 1);
+            vertical-align: top;
+        }
+        .circle {
+            position: absolute;
+        }
+        .circle1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(177.56deg, rgba(255, 108, 114, 0.36) 0%, rgba(255, 131, 67, 0.36) 100%);
+            top: 65px;
+            left: -60px;
+        }
+        .circle2 {
+            width: 338px;
+            height: 338px;
+            background: linear-gradient(142.13deg, rgba(255, 108, 114, 1) 0%, rgba(255, 131, 67, 1) 100%);
+            top: -249px;
+            right: -94px;
+            border-radius: 50%;
+        }
+        .circle3 {
+            width: 384px;
+            height: 384px;
+            border-radius: 50%;
+            bottom: -300px;
+            left: -154px;
+            background: linear-gradient(142.13deg, rgba(255, 108, 114, 0.3) 0%, rgba(255, 131, 67, 0.3) 100%);
+        }
+        .circle4 {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            bottom: -200px;
+            right: -80px;
+            background: linear-gradient(177.56deg, rgba(255, 108, 114, 1) 0%, rgba(255, 131, 67, 1) 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img class="logo-img" src="./img/logo.svg" alt="">
+        <p class="logo-text">即使购物</p>
+    </div>
+    <div class="logo-form">
+        <div class="form-container input-username">
+            <label for="userName">账号</label>
+            <input id='userName' type="text">
+        </div>
+        <div class="form-container input-password">
+            <label for="userPassword">密码</label>
+            <input id="userPassword" type="text">
+        </div>
+        <div class="input-text">
+            <p>没有账号？<a href="">点击注册</a></p>
+        </div>
+    </div>
+    <div class="quick-login">
+        用户若支付宝已登录，可使用
+        <span>快捷登录</span>
+    </div>
+    <div class="login">
+        <button>登录</button>
+    </div>
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+</body>
+
+</html>

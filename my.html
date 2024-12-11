@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body {
+            height: 100%;
+        }
+        .container {
+            /* width: 375px; */
+            height: 100%;
+            /* background-color: rgba(245, 245, 245, 1); */
+            margin: 0 auto;
+            position: relative;
+            background: url('./img/bg2.png') no-repeat, url('./img/bg3.png') no-repeat, url('./img/bg1.png') no-repeat;
+            background-size: 375px 275px;
+        }
+        .header {
+            width: 375px;
+            height: 317px;
+            /* background: green; */
+            margin-bottom: 82px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header .user-Header {
+            width: 68px;
+            height: 68px;
+            margin-top: 10px;
+            border-radius: 50%;
+        }
+        .header .title {
+            padding: 8px 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 1);
+        }
+        .header .sig {
+            margin-top: 37px;
+        }
+        .content .item {
+            width: 335px;
+            height: 68px;
+            background-color: rgba(255, 255, 255, 1);
+            margin: 0 auto 12px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(92, 92, 92, 0.1);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .content .item-content {
+            width: 244px;
+            color: (255, 108, 114, 1);
+            font-size: 16px;
+            font-weight: 400px;
+        }
+        .content .item-head {
+            width: 66px;
+            /* border: 1px solid blue; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .content .item-footer {
+            width: 45px;
+            /* border: 1px solid blue; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .footer {
+            width: 375px;
+            height: 104px;
+            /* background-color: red; */
+            /* 固定定位 */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-image: url('./img/navBg.png');
+            background-position: -20px 40px;
+            background-repeat: no-repeat;
+            background-size: 412px 77px;
+        }
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: end;
+        }
+        .nav .item {
+            width: 52px;
+            height: 52px;
+            /* border: 1px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav .item img {
+            width: 22px;
+            height: 22px;
+        }
+        .color-white {
+            color: rgba(255, 255, 255, 1)
+        }
+        .color-gray {
+            color: rgba(255, 255, 255, 0.6)
+        }
+        .footer .goodcar {
+            position: relative;
+            /* background-color; */
+            top: -40px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-image: url('./img/image.png');
+            background-size: 60px 60px;
+        }
+        .header .co {
+            width: 335px;
+            height: 96px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 23px;
+            border-radius: 14px;
+            background: linear-gradient(180deg, rgba(255, 108, 114, 1) 0%, rgba(255, 131, 67, 1) 100%);
+            box-shadow: 0px 4px 8px rgba(97, 23, 8, 0.3), inset -2px -2px 0px rgba(255, 255, 255, 1), inset 2px 2px 0px rgba(255, 255, 255, 1);
+            backdrop-filter: blur(10px);
+           margin-top: 10px;
+        }
+        .header .co p{
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+        }
+        .header .sig{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header .sig span{
+           text-align: center;
+           color: rgba(255, 255, 255, 1);
+        }
+        .header .co .one{
+            width: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="title">我的页面</span>
+            <img class="user-Header" src="./img/userHead.png" alt="">
+            <div class="sig">
+                <span>Jacqueline Erica</span>
+                <span>点击编辑个人签名</span>
+                <img src="" alt="">
+                <div class="co">
+                    <div>
+                        <p>粉丝</p> 
+                        <p>1145</p>
+                    </div>
+                    <div class="one"></div>
+                    <div>
+                        <p>待发货</p>
+                        <p>2</p>
+                    </div>
+                    <div class="one"></div>
+                    <div>
+                        <p>待收货</p>
+                        <p>6</p>
+                    </div>
+                    <div class="one"></div>
+                    <div>
+                        <p>待评价</p>
+                        <p>12</p>
+                    </div>
+                    <div class="one"></div>
+                    <div>
+                        <p>售后</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="item ">
+                <div class="item-head"> <img src="./img/service.png" alt=""></div>
+                <p class="item-content">在线客服</p>
+                <div class="item-footer"><img src="./img/fott.png" alt=""></div>
+            </div>
+            <div class="item ">
+                <div class="item-head"> <img src="./img/service.png" alt=""></div>
+                <p class="item-content">分期付款</p>
+                <div class="item-footer"><img src="./img/fott.png" alt=""></div>
+            </div>
+            <div class="item ">
+                <div class="item-head"> <img src="./img/service.png" alt=""></div>
+                <p class="item-content">绑定银行卡</p>
+                <div class="item-footer"><img src="./img/fott.png" alt=""></div>
+            </div>
+            <div class="item ">
+                <div class="item-head"> <img src="./img/service.png" alt=""></div>
+                <p class="item-content">支付明细</p>
+                <div class="item-footer"><img src="./img/fott.png" alt=""></div>
+            </div>
+        </div>
+        <!-- <div style="height: 104px;"></div> -->
+        <div class="footer nav">
+            <div class="item color-gray">
+                <img src="./img/navType1.png" alt="">
+                <span>分类</span>
+            </div>
+            <div class="item color-gray">
+                <img src="./img/navType.png" alt="">
+                <span>分类</span>
+            </div>
+            <div class="item goodcar">
+                <img src="./img/goodcar.png" alt="">
+                <!-- <span>首页</span> -->
+            </div>
+            <div class="item color-gray">
+                <img src="./img/navType3.png" alt="">
+                <span>论坛</span>
+            </div>
+            <div class="item color-white">
+                <img src="./img/navType4.png" alt="">
+                <span>我的</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
